@@ -22,13 +22,11 @@
         self.textField = [[[UITextField alloc] init]autorelease];
         self.textField.clearsOnBeginEditing = NO;
         self.textField.enabled = YES;
-        [self.textLabel setFont:[UIFont fontWithName:@"Helvetica" size:12]];
         self.textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         self.textField.textAlignment = UITextAlignmentLeft;
         self.textField.font = [UIFont systemFontOfSize:17];
         self.textField.returnKeyType = UIReturnKeyDone;
         self.textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
-       
         [self.contentView addSubview:self.textField];
     }
     return self;
@@ -39,15 +37,14 @@
    
     float i = (self.bounds.size.width/32);
     
-    CGRect rect = CGRectMake((int)i, (int) self.bounds.size.height/4, (int)i*8, (int)25.0);
+    CGRect rect = CGRectMake((int)i, (int) self.bounds.size.height/4, (int)i*13, (int)25.0);
     [self.textLabel setFrame:rect];
-//    self.textLabel.backgroundColor = [UIColor greenColor];
+    //self.textLabel.backgroundColor = [UIColor greenColor];
     
-    CGRect rect2 = CGRectMake( (int)i*9, (int)self.bounds.size.height/4 , (int)i*20, (int)25.0);
+    CGRect rect2 = CGRectMake( (int)i*14, (int)self.bounds.size.height/4 , (int)i*13, (int)25.0);
     [self.textField setFrame:rect2];
-//     self.textField.backgroundColor = [UIColor redColor];
-     self.selectionStyle = UITableViewCellSelectionStyleNone;
-
+    // self.textField.backgroundColor = [UIColor redColor];
+    
   
 }
 
