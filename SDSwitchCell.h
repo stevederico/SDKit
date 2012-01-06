@@ -1,20 +1,26 @@
 //
 //  SDSwitchCell.h
-//  HostessPro
+//  
 //
-//  Created by Steve Derico on 9/22/11.
-//  Copyright 2011 Bixby Apps. All rights reserved.
+//  Created by Steve Derico on 10/18/11.
+//  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+#import "SDSmoothCell.h"
+@protocol SDSwitchDelegate <NSObject>
 
-@interface SDSwitchCell : UITableViewCell {
+@optional
+-(void) switchFlipped:(id)sender;
 
-    UISwitch *_cellSwitch;
+@end
+@interface SDSwitchCell : SDSmoothCell {
 
+
+    UISwitch *_switchItem;
+    id <SDSwitchDelegate> _delegate;
 }
-
-//Sorry switch is a keyword and cannot be used for a property name.
-@property(nonatomic,retain) UISwitch *cellSwitch;
+@property (nonatomic, retain) id <SDSwitchDelegate> delegate;
+@property (nonatomic, retain) UISwitch *switchItem;
 
 @end

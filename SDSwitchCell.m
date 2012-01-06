@@ -1,42 +1,53 @@
 //
 //  SDSwitchCell.m
-//  SDKIT
+//  
 //
-//  Created by Steve Derico on 9/22/11.
-//  Copyright 2011 Bixby Apps. All rights reserved.
+//  Created by Steve Derico on 10/18/11.
+//  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
 #import "SDSwitchCell.h"
 
-#define MAIN_FONT_SIZE 16.0
-#define LEFT_COLUMN_OFFSET 10.0
-
 @implementation SDSwitchCell
-@synthesize cellSwitch = _cellSwitch;
+@synthesize switchItem = _switchItem;
+@synthesize delegate = _delegate;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
-        
-        self.selectionStyle = UITableViewCellSelectionStyleNone;
-        self.cellSwitch = [[[UISwitch alloc] initWithFrame:CGRectMake(0, 0, 100, 50)] autorelease];
-        self.accessoryView=self.cellSwitch;
+        UISwitch   *item = [[UISwitch alloc]initWithFrame:CGRectMake(215.0f, 8.0f, 10.0f, 10.0f)];
+        self.switchItem = item;
+     
+        [item release];
         
         
     }
     return self;
 }
 
-
-
-
-
-- (void) dealloc {
+-(void)layoutSubviews {
     
-    [_cellSwitch release];
+    [super layoutSubviews];
 
+ 
+    [self.switchItem addTarget:self action:@selector(switchFlipped:) forControlEvents:UIControlEventValueChanged];
+    [self.contentView addSubview:self.switchItem];
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
+          self.accessoryType = UITableViewCellAccessoryNone;
+}
+
+- (void)switchFlipped:(id)sender {
+
+    [self.delegate switchFlipped:self];
+
+}
+
+
+- (void)dealloc {
+    self.switchItem = nil;
+    self.delegate = nil;
     [super dealloc];
 }
 
