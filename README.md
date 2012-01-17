@@ -1,26 +1,24 @@
 Introduction
 ------------
-Appirater is a class that you can drop into any iPhone app that will help remind your users
-to review your app on the App Store. The code is released under the MIT/X11, so feel free to
+[Project Name] is a 
+The code is released under the MIT/X11 License, so feel free to
 modify and share your changes with the world. To find out more, check out the [project
-homepage] [homepage].
+homepage].
 
 Getting Started
 ---------------
-1. Add the Appirater code into your project
-2. Add the `CFNetwork` and `SystemConfiguration` frameworks to your project
-3. Call `[Appirater appLaunched:YES]` at the end of your app delegate's `application:didFinishLaunchingWithOptions:` method.
-4. Call `[Appirater appEnteredForeground:YES]` in your app delegate's `applicationWillEnterForeground:` method.
-5. (OPTIONAL) Call `[Appirater userDidSignificantEvent:YES]` when the user does something 'significant' in the app.
-6. Finally, set the `APPIRATER_APP_ID` in `Appirater.h` to your Apple provided software id.
+1. 
 
 License
 -------
-Copyright 2010. [Arash Payan] [arash].
+Copyright 2010. [Bixby Apps] [Steve Derico].
 This library is distributed under the terms of the MIT/X11.
 
-While not required, I greatly encourage and appreciate any improvements that you make
-to this library be contributed back for the benefit of all who use Appirater.
+I greatly encourage and appreciate any improvements that you make
+to this library be contributed back for the benefit of all who use [Project Name].
 
-[homepage]: http://arashpayan.com/blog/index.php/2009/09/07/presenting-appirater/
-[arash]: http://arashpayan.com
+[Project GitHub]:http://www.github.com/stevederico/
+[Project Name]:XXXX
+[GitHub]:http://www.github.com/stevederico
+[Blog]: http://www.stevederico.com
+[Twitter]:http://www.twitter.com/stevederico
