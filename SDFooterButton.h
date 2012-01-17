@@ -17,5 +17,5 @@
 
 @interface SDFooterButton : UIView
 @property (nonatomic, retain) UIButton *button;
-@property (nonatomic, retain) id delegate;
+@property (assign) id <SDFooterButtonDelegate> delegate;
 @end

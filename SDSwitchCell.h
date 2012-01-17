@@ -20,7 +20,7 @@
     UISwitch *_switchItem;
     id <SDSwitchDelegate> _delegate;
 }
-@property (nonatomic, retain) id <SDSwitchDelegate> delegate;
+@property (assign) id <SDSwitchDelegate> delegate;
 @property (nonatomic, retain) UISwitch *switchItem;
 
 @end
