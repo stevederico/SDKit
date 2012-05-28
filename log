@@ -19,14 +19,13 @@ Removed AccessoryType Check for ContentView Size Check
 Improved SDTextFieldCell Label Spacing. 
 Improved SDTextFieldCell Field Spacing
 
+Removed Selection on SDTextFieldCell
+Removed SDLabelCell
+Added Submit an Issue Button
+Added SDSampleApp Logo
+Fixed Vertical Alignment Issue With SDPlaceHolderCell
+Fixed CellItem Vertical Alignment Issue on Larger Cells with SDSwitchCell
 
--Add Submit an Issue Button
--Drop SDLabelCell - No different that UITableViewCellValue1
-
-
--Test with larger cell sizes
--Test with Rotation
--Make Sure Fields don't over lapp on LabelCell
 
 -Write Documentation
 -Write Wiki

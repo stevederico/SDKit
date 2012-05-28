@@ -34,7 +34,9 @@
     self.accessoryType = UITableViewCellAccessoryNone;
     CGFloat margin = self.contentView.bounds.size.height * .20;
     CGFloat width =  self.switchItem.frame.size.width;
-    CGRect rect = CGRectMake(self.contentView.bounds.size.width - margin - width  , self.contentView.bounds.origin.y+margin, width , self.contentView.bounds.size.height );
+    CGRect rect = CGRectMake(self.contentView.bounds.size.width - margin - width  , self.contentView.bounds.origin.y+(self.contentView.bounds.size.height - self.switchItem.frame.size.height)/2,
+                             width ,
+                             self.contentView.bounds.size.height );
     
     [self.switchItem setFrame:rect];
     
