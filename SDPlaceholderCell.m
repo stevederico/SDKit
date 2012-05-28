@@ -9,9 +9,6 @@
 
 #import "SDPlaceholderCell.h"
 
-#define CellTextFieldWidth 200.0
-#define MarginBetweenControls self.bounds.size.width/40
-
 @implementation SDPlaceholderCell
 @synthesize textField = _textField;
 
@@ -19,16 +16,17 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        self.textField = [[[UITextField alloc] init]autorelease];
-        self.textField.clearsOnBeginEditing = NO;
+        self.textField = [[UITextField alloc] init];
+
+
         self.textField.enabled = YES;
-        [self.textLabel setFont:[UIFont fontWithName:@"Helvetica" size:12]];
-        self.textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+        [self.textField setFont:[UIFont fontWithName:@"Helvetica" size:12]];
+        self.textField.clearButtonMode = UITextFieldViewModeAlways;
         self.textField.textAlignment = UITextAlignmentLeft;
         self.textField.font = [UIFont systemFontOfSize:17];
-        self.textField.returnKeyType = UIReturnKeyDefault;
         self.textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
-        
+        self.textField.placeholder = @"Placeholder";
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
         [self.contentView addSubview:self.textField];
     
     }
@@ -38,22 +36,14 @@
 -(void)layoutSubviews {
     [super layoutSubviews];
  
-    float i = (self.bounds.size.width/32);
-    CGRect rect2 = CGRectMake( (int)i, (int)self.bounds.size.height/8 , (int)i*28, 35);
-    [self.textField setFrame:rect2];
-     self.selectionStyle = UITableViewCellSelectionStyleNone;
+    float margin = 5.0f;
+    CGRect rect = CGRectMake(margin, 3.0f , self.contentView.bounds.size.width- margin*2, 35);
+    [self.textField setFrame:rect];
+    [self.textField setBackgroundColor:[UIColor greenColor]];
 
   
 }
 
 
-
-- (void) dealloc {
-    
-   [_textField release];
-    _textField = nil;
-
-    [super dealloc];
-}
 
 @end

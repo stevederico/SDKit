@@ -19,7 +19,7 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        self.textField = [[[UITextField alloc] init]autorelease];
+        self.textField = [[UITextField alloc] init];
         self.textField.clearsOnBeginEditing = NO;
         self.textField.enabled = YES;
         [self.textLabel setFont:[UIFont fontWithName:@"Helvetica" size:12]];
@@ -28,7 +28,7 @@
         self.textField.font = [UIFont systemFontOfSize:17];
         self.textField.returnKeyType = UIReturnKeyDone;
         self.textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
-       
+        self.textField.placeholder = @"Placeholder";
         [self.contentView addSubview:self.textField];
     }
     return self;
@@ -53,11 +53,6 @@
 
 
 
-- (void) dealloc {
-    self.textField =nil;
-   [_textField release];
 
-    [super dealloc];
-}
 
 @end

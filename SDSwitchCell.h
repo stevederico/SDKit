@@ -16,11 +16,10 @@
 @end
 @interface SDSwitchCell : SDSmoothCell {
 
-
     UISwitch *_switchItem;
-    id <SDSwitchDelegate> _delegate;
+        __weak id <SDSwitchDelegate> _delegate;
 }
-@property (assign) id <SDSwitchDelegate> delegate;
+@property (weak,nonatomic) id <SDSwitchDelegate> delegate;
 @property (nonatomic, retain) UISwitch *switchItem;
 
 @end

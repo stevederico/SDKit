@@ -19,8 +19,7 @@
         // Initialization code
         UISwitch   *item = [[UISwitch alloc]initWithFrame:CGRectMake(215.0f, 8.0f, 10.0f, 10.0f)];
         self.switchItem = item;
-     
-        [item release];
+   
         
         
     }
@@ -45,10 +44,6 @@
 }
 
 
-- (void)dealloc {
-    self.switchItem = nil;
-    self.delegate = nil;
-    [super dealloc];
-}
+
 
 @end

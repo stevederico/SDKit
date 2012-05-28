@@ -1,0 +1,4 @@
+Added SDFooterButton VC
+Added SDFooterButton InitWithStyle
+Added Rotation Support to SDFooterButton
+Added ShadowColor to SDFooterButton

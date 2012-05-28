@@ -8,14 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol SDFooterButtonDelegate <NSObject>
+typedef enum {
+    SDFooterButtonStyleGreen,
+    SDFooterButtonStyleGray,
+    SDFooterButtonStyleRed,
+} SDFooterButtonStyle;
 
--(void)footerButtonTapped;
-
-@end
-
-
-@interface SDFooterButton : UIView
+@interface SDFooterButtonView : UIView
 @property (nonatomic, retain) UIButton *button;
-@property (assign) id <SDFooterButtonDelegate> delegate;
+- (id)initWithStyle:(SDFooterButtonStyle)style;
 @end
