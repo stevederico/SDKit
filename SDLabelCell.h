@@ -10,6 +10,6 @@
 
 @interface SDLabelCell : UITableViewCell 
 
-@property (nonatomic,retain) UILabel *label;
+
 
 @end

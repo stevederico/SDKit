@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 Bixby Apps. All rights reserved.
 //
 #import <QuartzCore/QuartzCore.h>
-#import "SDSmoothCell.h"
+#import "SDRoundedImageViewCell.h"
 
-@implementation SDSmoothCell
+@implementation SDRoundedImageViewCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

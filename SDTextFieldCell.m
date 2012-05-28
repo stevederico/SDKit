@@ -9,9 +9,6 @@
 
 #import "SDTextFieldCell.h"
 
-#define CellTextFieldWidth 200.0
-#define MarginBetweenControls self.bounds.size.width/40
-
 @implementation SDTextFieldCell
 @synthesize textField = _textField;
 
@@ -21,14 +18,11 @@
     if (self) {
         self.textField = [[UITextField alloc] init];
         self.textField.clearsOnBeginEditing = NO;
-        self.textField.enabled = YES;
-        [self.textLabel setFont:[UIFont fontWithName:@"Helvetica" size:12]];
         self.textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         self.textField.textAlignment = UITextAlignmentLeft;
-        self.textField.font = [UIFont systemFontOfSize:17];
-        self.textField.returnKeyType = UIReturnKeyDone;
         self.textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
-        self.textField.placeholder = @"Placeholder";
+        self.textField.placeholder = @"john@smith.com";
+        [self setSelectionStyle:UITableViewCellSelectionStyleNone];
         [self.contentView addSubview:self.textField];
     }
     return self;
@@ -36,23 +30,27 @@
 
 -(void)layoutSubviews {
     [super layoutSubviews];
-   
-    float i = (self.bounds.size.width/32);
+    CGFloat margin = self.contentView.bounds.size.width *.05;
+    CGFloat textWidth = self.contentView.bounds.size.width *.3;
     
-    CGRect rect = CGRectMake((int)i, (int) self.bounds.size.height/4, (int)i*8, (int)25.0);
-    [self.textLabel setFrame:rect];
-//    self.textLabel.backgroundColor = [UIColor greenColor];
+    CGRect labelRect = CGRectMake(self.contentView.bounds.origin.x + margin, 
+                                  self.contentView.bounds.origin.y,
+                                  textWidth,
+                                  self.contentView.bounds.size.height );
     
-    CGRect rect2 = CGRectMake( (int)i*9, (int)self.bounds.size.height/4 , (int)i*20, (int)25.0);
-    [self.textField setFrame:rect2];
-//     self.textField.backgroundColor = [UIColor redColor];
-     self.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    CGRect fieldRect = CGRectMake(textWidth + margin , 
+                                  self.contentView.bounds.origin.y,
+                                  self.contentView.bounds.size.width - textWidth -margin ,
+                                  self.contentView.bounds.size.height );
+    
 
-  
+    
+
+    [self.textField setFrame:fieldRect];
+    [self.textLabel setFrame:labelRect];
+    [self.textField setTextAlignment:UITextAlignmentLeft];
+
 }
-
-
-
-
 
 @end

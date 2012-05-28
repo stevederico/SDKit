@@ -9,56 +9,51 @@
 
 #import "SDLabelCell.h"
 
-#define CellTextFieldWidth 200.0
-#define MarginBetweenControls self.bounds.size.width/40
 
 @implementation SDLabelCell
-@synthesize label = _label;
+
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:reuseIdentifier];
     if (self) {
-        [self.textLabel setFont:[UIFont fontWithName:@"Helvetica-Bold" size:20]];
         [self.textLabel setBackgroundColor:[UIColor clearColor]];
-        [self.textLabel setTextColor:[UIColor darkGrayColor]];
-        self.textLabel.numberOfLines = 1;
         self.textLabel.adjustsFontSizeToFitWidth = YES;
         [self.textLabel setHighlightedTextColor:[UIColor whiteColor]];
 
-        self.label = [[UILabel alloc] init];
-        self.label.textAlignment = UITextAlignmentRight;
-        self.label.font = [UIFont fontWithName:@"Helvetica" size:20];
-        self.label.textColor = [UIColor lightGrayColor];
-        [self.label setHighlightedTextColor:[UIColor whiteColor]];
-        [self.label setBackgroundColor:[UIColor clearColor]];
-        [self.label setAdjustsFontSizeToFitWidth:YES];
+        self.detailTextLabel.textAlignment = UITextAlignmentRight;
+        [self.detailTextLabel setHighlightedTextColor:[UIColor whiteColor]];
+        [self.detailTextLabel setBackgroundColor:[UIColor clearColor]];
+        [self.detailTextLabel setAdjustsFontSizeToFitWidth:YES];
         
-        [self.contentView addSubview:self.label];
+        [self.contentView addSubview:self.detailTextLabel];
     }
     return self;
 }
 
 -(void)layoutSubviews {
     [super layoutSubviews];
-    CGFloat margin = 10.0f;
-    CGRect rect = CGRectMake(margin, -3.0f, self.bounds.size.width - margin*2, 50.0f );
+    CGFloat margin = self.bounds.size.height * .20;
+
+    CGFloat textWidth = [self.detailTextLabel.text sizeWithFont:self.detailTextLabel.font].width;
+    
+    CGRect labelRect = CGRectMake(self.contentView.bounds.size.width -margin - textWidth, 
+                                  self.contentView.bounds.origin.y,
+                                  textWidth ,
+                                  self.contentView.bounds.size.height );
+    
+    CGRect rect = CGRectMake(margin,
+                             self.contentView.bounds.origin.y,
+                             self.contentView.bounds.size.width -labelRect.size.width,
+                             self.contentView.bounds.size.height );
+    
     [self.textLabel setFrame:rect];
     [self.textLabel setTextAlignment:UITextAlignmentLeft];
-    
-    CGFloat textWidth =  [self.label.text sizeWithFont:self.label.font].width;
-    CGRect labelRect = CGRectMake(self.bounds.size.width - margin*3 - textWidth  , -3.0f, textWidth , 50.0f );
-    NSLog(@"AccessoryView %@",self.accessoryView);
-    if (self.accessoryType == UITableViewCellAccessoryDisclosureIndicator) {
-         labelRect = CGRectMake(self.bounds.size.width - margin*5 - textWidth  , -3.0f, textWidth , 50.0f );
-    }
+    [self.detailTextLabel setFrame:labelRect];
+
     
     
-    [self.label setFrame:labelRect];
-    
-    
-    
-    [self.label setTextAlignment:UITextAlignmentRight];
+    [self.detailTextLabel setTextAlignment:UITextAlignmentRight];
     
 
 

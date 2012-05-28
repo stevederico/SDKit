@@ -8,11 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SDTextFieldCell : UITableViewCell {
-
-    UITextField *_textField;
-    
-}
+@interface SDTextFieldCell : UITableViewCell
 
 @property (nonatomic,strong) UITextField *textField;
 

@@ -21,7 +21,7 @@
 
         self.textField.enabled = YES;
         [self.textField setFont:[UIFont fontWithName:@"Helvetica" size:12]];
-        self.textField.clearButtonMode = UITextFieldViewModeAlways;
+        self.textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         self.textField.textAlignment = UITextAlignmentLeft;
         self.textField.font = [UIFont systemFontOfSize:17];
         self.textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
@@ -36,10 +36,10 @@
 -(void)layoutSubviews {
     [super layoutSubviews];
  
-    float margin = 5.0f;
-    CGRect rect = CGRectMake(margin, 3.0f , self.contentView.bounds.size.width- margin*2, 35);
+    CGFloat margin = self.bounds.size.height * .10;
+    CGRect rect = CGRectMake(margin, margin , self.contentView.bounds.size.width- margin*2, 35);
     [self.textField setFrame:rect];
-    [self.textField setBackgroundColor:[UIColor greenColor]];
+//    [self.textField setBackgroundColor:[UIColor greenColor]];
 
   
 }

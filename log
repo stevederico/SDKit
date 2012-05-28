@@ -7,5 +7,26 @@ Added Support for AccessoryView on SDLabelCell
 Added initWithFirstColor:SecondColor:ReuseIdentifier 
 Added ImageView Positioning for SDSmoothCell
 
--Change SDSmoothCell to SDRoundedImageViewCell
--Add Clear button to SdPlaceholderCell
+Added Clear button to SDPlaceholderCell
+Added Improved Spacing for SDPlaceholderCell
+Changed SDSmoothCell to SDRoundedImageViewCell
+Improved AccessoryType Check
+Changed Pattern Cell Colors
+Removed Separators from TableView
+Improved Margin on SDLabelCell
+Changed label name to detailTextLabel on SDLabelCell
+Removed AccessoryType Check for ContentView Size Check
+Improved SDTextFieldCell Label Spacing. 
+Improved SDTextFieldCell Field Spacing
+
+
+-Add Submit an Issue Button
+-Drop SDLabelCell - No different that UITableViewCellValue1
+
+
+-Test with larger cell sizes
+-Test with Rotation
+-Make Sure Fields don't over lapp on LabelCell
+
+-Write Documentation
+-Write Wiki

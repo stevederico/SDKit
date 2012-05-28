@@ -32,21 +32,11 @@
 
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     self.accessoryType = UITableViewCellAccessoryNone;
-    CGFloat margin = self.bounds.size.height * .20;
+    CGFloat margin = self.contentView.bounds.size.height * .20;
     CGFloat width =  self.switchItem.frame.size.width;
-    CGRect rect = CGRectMake(self.bounds.size.width - margin*3 - width  , margin, width , 50.0f );
-    NSLog(@"AccessoryView %@",self.accessoryView);
-    if (self.accessoryType == UITableViewCellAccessoryDisclosureIndicator||self.accessoryType == UITableViewCellAccessoryCheckmark) {
-        rect = CGRectMake(self.bounds.size.width - margin*5 - width  , margin, width , 50.0f );
-    }
-    
+    CGRect rect = CGRectMake(self.contentView.bounds.size.width - margin - width  , self.contentView.bounds.origin.y+margin, width , self.contentView.bounds.size.height );
     
     [self.switchItem setFrame:rect];
-    
-    
-    
-
-    
     
 }
 
