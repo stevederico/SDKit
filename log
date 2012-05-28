@@ -2,3 +2,10 @@ Added SDFooterButton VC
 Added SDFooterButton InitWithStyle
 Added Rotation Support to SDFooterButton
 Added ShadowColor to SDFooterButton
+
+Added Support for AccessoryView on SDLabelCell
+Added initWithFirstColor:SecondColor:ReuseIdentifier 
+Added ImageView Positioning for SDSmoothCell
+
+-Change SDSmoothCell to SDRoundedImageViewCell
+-Add Clear button to SdPlaceholderCell

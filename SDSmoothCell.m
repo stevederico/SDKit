@@ -15,21 +15,25 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
-          [self.imageView setBounds:CGRectMake(5, 5, 45, 45)];
-        	[self setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+
+        [self setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+        [self.imageView setImage:[UIImage imageNamed:@"gg.jpg"]];
+        self.imageView.contentMode = UIViewContentModeScaleAspectFit; // This determines position of image
+        self.imageView.clipsToBounds = YES;
+        // Configure the view for the selected state
+    
     }
     return self;
 }
 
 - (void)layoutSubviews{
     [super layoutSubviews];
-    [self.imageView setBounds:CGRectMake(5, 5, 45, 45)];
+    CGFloat margin = self.imageView.frame.size.height * .15;
+    self.imageView.frame = CGRectMake(
+                                 self.imageView.frame.origin.x + margin, 
+                                 self.imageView.frame.origin.y + margin/2, self.imageView.frame.size.height-margin, self.imageView.frame.size.height-margin);
+    
 
-    // Configure the view for the selected state
-    self.backgroundColor = [UIColor colorWithRed:226.0/255.0 green:229.0/255.0 blue:234.0/255.0 alpha:1.0];
-    self.textLabel.textColor =  [UIColor colorWithRed:53.0/255.0 green:53.0/255.0 blue:53.0/255.0 alpha:1.0];
-  
-    self.selectionStyle = UITableViewCellSelectionStyleGray;
     
     CALayer *l = [self.imageView layer];
     [l setMasksToBounds:YES];

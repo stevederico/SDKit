@@ -10,16 +10,15 @@
 
 @implementation SDSwitchCell
 @synthesize switchItem = _switchItem;
-@synthesize delegate = _delegate;
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
-{
+
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
-        UISwitch   *item = [[UISwitch alloc]initWithFrame:CGRectMake(215.0f, 8.0f, 10.0f, 10.0f)];
+        UISwitch *item = [[UISwitch alloc]initWithFrame:CGRectZero];
         self.switchItem = item;
-   
+        [self.contentView addSubview:self.switchItem];
         
         
     }
@@ -30,20 +29,29 @@
     
     [super layoutSubviews];
 
- 
-    [self.switchItem addTarget:self action:@selector(switchFlipped:) forControlEvents:UIControlEventValueChanged];
-    [self.contentView addSubview:self.switchItem];
+
     self.selectionStyle = UITableViewCellSelectionStyleNone;
-          self.accessoryType = UITableViewCellAccessoryNone;
+    self.accessoryType = UITableViewCellAccessoryNone;
+    CGFloat margin = self.bounds.size.height * .20;
+    CGFloat width =  self.switchItem.frame.size.width;
+    CGRect rect = CGRectMake(self.bounds.size.width - margin*3 - width  , margin, width , 50.0f );
+    NSLog(@"AccessoryView %@",self.accessoryView);
+    if (self.accessoryType == UITableViewCellAccessoryDisclosureIndicator||self.accessoryType == UITableViewCellAccessoryCheckmark) {
+        rect = CGRectMake(self.bounds.size.width - margin*5 - width  , margin, width , 50.0f );
+    }
+    
+    
+    [self.switchItem setFrame:rect];
+    
+    
+    
+
+    
+    
 }
 
-- (void)switchFlipped:(id)sender {
 
-    [self.delegate switchFlipped:self];
-
-}
-
-
+   
 
 
 @end

@@ -48,7 +48,16 @@
     
     CGFloat textWidth =  [self.label.text sizeWithFont:self.label.font].width;
     CGRect labelRect = CGRectMake(self.bounds.size.width - margin*3 - textWidth  , -3.0f, textWidth , 50.0f );
+    NSLog(@"AccessoryView %@",self.accessoryView);
+    if (self.accessoryType == UITableViewCellAccessoryDisclosureIndicator) {
+         labelRect = CGRectMake(self.bounds.size.width - margin*5 - textWidth  , -3.0f, textWidth , 50.0f );
+    }
+    
+    
     [self.label setFrame:labelRect];
+    
+    
+    
     [self.label setTextAlignment:UITextAlignmentRight];
     
 

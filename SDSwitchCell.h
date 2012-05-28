@@ -7,19 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SDSmoothCell.h"
-@protocol SDSwitchDelegate <NSObject>
 
-@optional
--(void) switchFlipped:(id)sender;
 
-@end
-@interface SDSwitchCell : SDSmoothCell {
+@interface SDSwitchCell : UITableViewCell {
 
     UISwitch *_switchItem;
-        __weak id <SDSwitchDelegate> _delegate;
+
 }
-@property (weak,nonatomic) id <SDSwitchDelegate> delegate;
+
 @property (nonatomic, retain) UISwitch *switchItem;
 
 @end

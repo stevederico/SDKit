@@ -10,5 +10,8 @@
 #import <UIKit/UIKit.h>
 
 @interface SDPatternCell : UITableViewCell
+@property (nonatomic, strong) UIColor *firstColor;
+@property (nonatomic, strong) UIColor *secondColor;
 
+- (id)initWithFirstColor:(UIColor*)firstColor andSecondColor:(UIColor*)secondColor andReuseIdentifier:(NSString*)reuseIdentifier;
 @end
