@@ -25,7 +25,13 @@ Added Submit an Issue Button
 Added SDSampleApp Logo
 Fixed Vertical Alignment Issue With SDPlaceHolderCell
 Fixed CellItem Vertical Alignment Issue on Larger Cells with SDSwitchCell
+Updated Copyright Notices
 
+Improved SDFooterButtonViewStyleGray
 
 -Write Documentation
 -Write Wiki
+
+-Add SettingsViewController
+-Add LoginViewController
+-Add Parse Sync Class
