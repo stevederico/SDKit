@@ -26,6 +26,8 @@ Be sure you have the docset selected in the organizer to see results for SDKit.
 To get started, simply import SDKit/SDKit.h
 
         #import "SDKit/SDKit.h"
+        
+Example code & Photos for each class are available on the [SDKit Usage Page](https://github.com/stevederico/SDKit/wiki/Usage).
 
 ## Demo
 
