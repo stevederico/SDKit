@@ -22,10 +22,6 @@ Install the documentation into Xcode with the following steps:
 Be sure you have the docset selected in the organizer to see results for SDKit.
 
 ## Usage
-
-To get started, simply import SDKit/SDKit.h
-
-        #import "SDKit/SDKit.h"
         
 Example code & Photos for each class are available on the [SDKit Usage Page](https://github.com/stevederico/SDKit/wiki/Usage).
 
@@ -33,10 +29,13 @@ Example code & Photos for each class are available on the [SDKit Usage Page](htt
 
 [SDSampleApp](https://github.com/stevederico/SDSampleApp) is an example app that showcases all the SDKit classes.
 
-## Adding SDKit to your project
+## Getting Started
 
-For installation instructions, see [the getting started guide on the SDKit website](http://sdkit.stevederico.com/#getting-started).
+To get started, simply import SDKit/SDKit.h
 
+        #import "SDKit/SDKit.h"
+        
+        
 ## Links
 
 * [Homepage](http://sdkit.stevederico.com)
