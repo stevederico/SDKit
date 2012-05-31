@@ -2,7 +2,7 @@
 
 SDKit is a set of useful classes, I have created while developing my apps. Please feel free to send a pull request and improve the repo.
 
-Please [Send me an email](mailto:steve@stevederico.com) if you are using SDKit in your project, I would love to hear about it.
+Please [send me an email](mailto:steve@stevederico.com) if you are using SDKit in your project, I would love to hear about it.
 
 ## Documentation
 
