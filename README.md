@@ -22,7 +22,7 @@ To get started, simply import SDKit/SDKit.h
 
 **Read the [SDKit Documentation](http://www.stevederico.com/sdkit) online.**
 
-Be sure you have the docset selected in the organizer to see results for SDKit.
+Or you can find an HTML copy of the documentation in the `Documentation` folder.
         
 ## Links
 
