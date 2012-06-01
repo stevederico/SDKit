@@ -1,6 +1,6 @@
 //
 //  SDSwitchCell.h
-//  
+//  SDKit
 //
 //  Created by Steve Derico on 10/18/11.
 //  Copyright 2011 Bixby Apps. All rights reserved.
