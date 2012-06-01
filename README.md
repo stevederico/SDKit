@@ -20,26 +20,15 @@ To get started, simply import SDKit/SDKit.h
 
 ## Documentation
 
-**Read the [SDKit Documentation](http://sdkit.stevederico.com) online.**
-
-Install the documentation into Xcode with the following steps:
-
-1. Open Xcode Preferences
-2. Choose Downloads
-3. Choose the Documentation tab
-4. Click the plus button in the bottom right and enter the following URL:
-    
-      http://sdkit.stevederico.com/com.stevederico.sdkit.atom
-
-5. Click Install next the new row reading "SDKit Documentation". (If you don't see it and didn't get an error, try restarting Xcode.)
+**Read the [SDKit Documentation](http://www.stevederico.com/sdkit) online.**
 
 Be sure you have the docset selected in the organizer to see results for SDKit.
         
 ## Links
 
-* [Homepage](http://sdkit.stevederico.com)
+* [Homepage](http://www.stevederico.com/sdkit)
 * [Source code](https://github.com/stevederico/SDKit)
-* [Documentation](http://sdkit.stevederico.com)
+* [Documentation](http://www.stevederico.com/sdkit)
 * [Known bugs](https://github.com/stevederico/SDKit/issues/labels/Bug)
 * [Future features](https://github.com/stevederico/SDKit/issues/labels/Feature)
 
