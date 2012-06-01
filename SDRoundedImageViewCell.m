@@ -17,7 +17,7 @@
         // Initialization code
 
         [self setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
-        [self.imageView setImage:[UIImage imageNamed:@"gg.jpg"]];
+
         self.imageView.contentMode = UIViewContentModeScaleAspectFit; // This determines position of image
         self.imageView.clipsToBounds = YES;
         // Configure the view for the selected state

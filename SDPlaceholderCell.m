@@ -23,6 +23,7 @@
         self.textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         [self.contentView addSubview:self.textField];
+        [self.textLabel setHidden:YES];
     
     }
     return self;

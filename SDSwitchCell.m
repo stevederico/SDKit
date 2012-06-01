@@ -19,7 +19,7 @@
         UISwitch *item = [[UISwitch alloc]initWithFrame:CGRectZero];
         self.switchItem = item;
         [self.contentView addSubview:self.switchItem];
-        
+
         
     }
     return self;

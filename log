@@ -26,8 +26,9 @@ Added SDSampleApp Logo
 Fixed Vertical Alignment Issue With SDPlaceHolderCell
 Fixed CellItem Vertical Alignment Issue on Larger Cells with SDSwitchCell
 Updated Copyright Notices
-
 Improved SDFooterButtonViewStyleGray
+Removed image from SDRoundedImageViewCell
+Added setImage to SDRoundedImageViewCellViewController
 
 -Write Documentation
 -Write Wiki

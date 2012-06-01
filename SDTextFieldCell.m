@@ -21,7 +21,6 @@
         self.textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         self.textField.textAlignment = UITextAlignmentLeft;
         self.textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
-        self.textField.placeholder = @"john@smith.com";
         [self setSelectionStyle:UITableViewCellSelectionStyleNone];
         [self.contentView addSubview:self.textField];
     }

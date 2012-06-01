@@ -7,6 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+/**
+ SDRoundedImageViewCell
+ 
+ Provides a UIImageView inside a UITableViewCell, accessable through the native `imageView` property.
+ 
+ The imageView has rounded corners and clips outlaying images to its bounds.
+ 
+ The designated initializer for this class is initWithStyle:reuseIdentifier:
+ */
+
 
 @interface SDRoundedImageViewCell : UITableViewCell
 

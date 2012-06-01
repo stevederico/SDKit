@@ -8,11 +8,25 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SDPlaceholderCell : UITableViewCell {
+/**
+ SDPlaceholderCell
+ 
+ Provides a UITextfield inside a UITableViewCell, accessable through the `textField` property.
+ 
+ The textLabel property of UITableViewCell is hidden and the textField is aligned to the far left of the UITableViewCell
+ 
+ The designated initializer for this class is initWithStyle:reuseIdentifier:
+ */
 
-    UITextField *_textField;
-    
-}
+@interface SDPlaceholderCell : UITableViewCell
+
+///--------------------------------
+/// @name Setting the Placeholder
+///--------------------------------
+
+/**
+ The textField used to display placeholder text and retrieve user input
+ */
 
 @property (nonatomic,retain) UITextField *textField;
 
