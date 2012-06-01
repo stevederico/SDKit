@@ -1,24 +1,37 @@
-SDKit
-------------
-[Project Name] is a set of resuseable classes to make iOS development easier.
-The code is released under the MIT/X11 License, so feel free to
-modify and share your changes with the world. To find out more, check out the [project
-homepage].
+# SDKit
 
-Getting Started
----------------
-1. 
+SDKit is a set of useful classes, I have created while developing my apps. Please feel free to send a pull request and improve the repo.
 
-License
--------
-Copyright 2012. [Steve Derico].
-This library is distributed under the terms of the MIT/X11.
+Please [send me an email](mailto:steve@stevederico.com) if you are using SDKit in your project, I would love to hear about it.
 
-I greatly encourage and appreciate any improvements that you make
-to this library be contributed back for the benefit of all who use [Project Name].
+## Usage
+        
+Example code & Photos for each class are available on the [SDKit Usage Page](https://github.com/stevederico/SDKit/wiki/Usage).
 
-[Project GitHub]:http://www.github.com/stevederico/
-[Project Name]:XXXX
-[GitHub]:http://www.github.com/stevederico
-[Blog]: http://www.stevederico.com
-[Twitter]:http://www.twitter.com/stevederico
+## Demo
+
+[SDSampleApp](https://github.com/stevederico/SDSampleApp) is an example app that showcases all the SDKit classes.
+
+## Getting Started
+
+To get started, simply import SDKit/SDKit.h
+
+        #import "SDKit/SDKit.h"
+
+## Documentation
+
+**Read the [SDKit Documentation](http://www.stevederico.com/sdkit) online.**
+
+Be sure you have the docset selected in the organizer to see results for SDKit.
+        
+## Links
+
+* [Homepage](http://www.stevederico.com/sdkit)
+* [Source code](https://github.com/stevederico/SDKit)
+* [Documentation](http://www.stevederico.com/sdkit)
+* [Known bugs](https://github.com/stevederico/SDKit/issues/labels/Bug)
+* [Future features](https://github.com/stevederico/SDKit/issues/labels/Feature)
+
+## Thanks
+
+Huge thanks to [Sam Soffes](http://github.com/samsoffes)
