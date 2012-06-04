@@ -16,7 +16,7 @@ Example code & Photos for each class are available on the [SDKit Usage Page](htt
 
 To get started, simply import SDKit/SDKit.h
 
-        #import "SDKit/SDKit.h"
+        #import "SDKit.h"
 
 ## Documentation
 
