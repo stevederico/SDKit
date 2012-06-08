@@ -1,6 +1,6 @@
 //
 //  SDTextFieldCell.m
-//  SDKIT
+//  SDKit
 //
 //  Created by Steve Derico on 9/20/11.
 //  Copyright 2011 Bixby Apps. All rights reserved.

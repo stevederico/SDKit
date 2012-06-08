@@ -1,6 +1,6 @@
 //
 //  SDSmoothCell.m
-//  PhotoUp
+//  SDKit
 //
 //  Created by Stephen Derico on 1/4/12.
 //  Copyright (c) 2012 Bixby Apps. All rights reserved.

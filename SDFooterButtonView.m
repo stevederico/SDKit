@@ -1,6 +1,6 @@
 //
 //  SDFooterButton.m
-//  hackerNews
+//  SDKit
 //
 //  Created by Stephen Derico on 1/7/12.
 //  Copyright (c) 2012 Bixby Apps. All rights reserved.
