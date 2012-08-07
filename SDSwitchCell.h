@@ -1,26 +1,34 @@
 //
 //  SDSwitchCell.h
-//  
+//  SDKit
 //
 //  Created by Steve Derico on 10/18/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Bixby Apps. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import "SDSmoothCell.h"
-@protocol SDSwitchDelegate <NSObject>
+/**
+ SDSwitchCell
+ 
+ Provides a UISwitch inside a UITableViewCell, accessable through the native `switchItem` property.
+ 
+ The UISwitch instance is aligned to the right side of the cell. 
+ 
+ It is recommended you use the addTarget:action:forControlEvents: method to detect user input.
+ 
+ The designated initializer for this class is initWithStyle:reuseIdentifier:
+ */
 
-@optional
--(void) switchFlipped:(id)sender;
+@interface SDSwitchCell : UITableViewCell
 
-@end
-@interface SDSwitchCell : SDSmoothCell {
+///--------------------------------
+/// @name Accessing the Switch
+///--------------------------------
 
+/**
+ The UISwitch instance used to retrieve user input
+ */
 
-    UISwitch *_switchItem;
-    id <SDSwitchDelegate> _delegate;
-}
-@property (assign) id <SDSwitchDelegate> delegate;
 @property (nonatomic, retain) UISwitch *switchItem;
 
 @end
