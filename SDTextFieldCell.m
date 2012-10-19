@@ -19,7 +19,11 @@
         self.textField = [[UITextField alloc] init];
         self.textField.clearsOnBeginEditing = NO;
         self.textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+<<<<<<< HEAD
         self.textField.textAlignment = NSTextAlignmentRight;
+=======
+        self.textField.textAlignment = UITextAlignmentLeft;
+>>>>>>> ee13d003b6311215751d2584ce3c0f0a0a36f644
         self.textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
         [self setSelectionStyle:UITableViewCellSelectionStyleNone];
         [self.contentView addSubview:self.textField];
@@ -48,7 +52,11 @@
 
     [self.textField setFrame:fieldRect];
     [self.textLabel setFrame:labelRect];
+<<<<<<< HEAD
     [self.textField setTextAlignment:NSTextAlignmentRight];
+=======
+    [self.textField setTextAlignment:UITextAlignmentLeft];
+>>>>>>> ee13d003b6311215751d2584ce3c0f0a0a36f644
 
 }
 

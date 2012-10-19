@@ -28,7 +28,11 @@
         self.textLabel.shadowColor = [UIColor whiteColor];
         self.textLabel.shadowOffset = CGSizeMake(0.0, 1.0);
         self.textLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:16.0];
+<<<<<<< HEAD
         self.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
+=======
+        self.textLabel.lineBreakMode = UILineBreakModeWordWrap;
+>>>>>>> ee13d003b6311215751d2584ce3c0f0a0a36f644
         self.textLabel.numberOfLines = 0;
         self.firstColor = [UIColor colorWithRed:173.0f/255.0f green:173.0f/255.0f blue:176.0f/255.0f alpha:1.0f];
         self.secondColor = [UIColor colorWithRed:210.0f/255.0f green:210.0f/255.0f blue:216.0f/255.0f alpha:1.0f];
