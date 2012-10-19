@@ -1,0 +1,38 @@
+Added SDFooterButton VC
+Added SDFooterButton InitWithStyle
+Added Rotation Support to SDFooterButton
+Added ShadowColor to SDFooterButton
+
+Added Support for AccessoryView on SDLabelCell
+Added initWithFirstColor:SecondColor:ReuseIdentifier 
+Added ImageView Positioning for SDSmoothCell
+
+Added Clear button to SDPlaceholderCell
+Added Improved Spacing for SDPlaceholderCell
+Changed SDSmoothCell to SDRoundedImageViewCell
+Improved AccessoryType Check
+Changed Pattern Cell Colors
+Removed Separators from TableView
+Improved Margin on SDLabelCell
+Changed label name to detailTextLabel on SDLabelCell
+Removed AccessoryType Check for ContentView Size Check
+Improved SDTextFieldCell Label Spacing. 
+Improved SDTextFieldCell Field Spacing
+
+Removed Selection on SDTextFieldCell
+Removed SDLabelCell
+Added Submit an Issue Button
+Added SDSampleApp Logo
+Fixed Vertical Alignment Issue With SDPlaceHolderCell
+Fixed CellItem Vertical Alignment Issue on Larger Cells with SDSwitchCell
+Updated Copyright Notices
+Improved SDFooterButtonViewStyleGray
+Removed image from SDRoundedImageViewCell
+Added setImage to SDRoundedImageViewCellViewController
+
+-Write Documentation
+-Write Wiki
+
+-Add SettingsViewController
+-Add LoginViewController
+-Add Parse Sync Class
