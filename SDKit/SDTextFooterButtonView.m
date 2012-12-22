@@ -62,7 +62,7 @@
 
 - (void) layoutSubviews {
     [super layoutSubviews];
-    self.button.frame = CGRectMake(10, self.textView.height + 10, self.bounds.size.width - 10 - 10, 45);
+    self.button.frame = CGRectMake(10, self.textView.frame.size.height + 10, self.bounds.size.width - 10 - 10, 45);
 }
 
 

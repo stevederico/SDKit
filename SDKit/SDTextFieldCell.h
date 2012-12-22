@@ -8,6 +8,23 @@
 
 #import <UIKit/UIKit.h>
 
+@class SDTextFieldCell;
+
+@protocol SDTextFieldCellDelegate <NSObject>
+
+@optional
+//Called to the delegate whenever return is hit when a user is typing into the rightTextField of an SDTextFieldCell
+- (BOOL)textFieldCell:(SDTextFieldCell *)inCell shouldReturnForIndexPath:(NSIndexPath*)inIndexPath withValue:(NSString *)inValue;
+//Called to the delegate whenever the text in the textField is changed
+- (void)textFieldCell:(SDTextFieldCell *)inCell updateTextLabelAtIndexPath:(NSIndexPath *)inIndexPath string:(NSString *)inValue;
+
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField;
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField;
+- (void)textFieldDidBeginEditing:(UITextField *)textField;
+- (void)textFieldDidEndEditing:(UITextField *)textField;
+
+@end
+
 /**
  SDTextFieldCell
  
@@ -22,6 +39,8 @@
 
 @interface SDTextFieldCell : UITableViewCell
 
-@property (nonatomic,strong) UITextField *textField;
-
+@property (nonatomic, strong) UITextField *textField;
+@property (nonatomic, weak) id <SDTextFieldCellDelegate> delegate;
+@property (nonatomic, strong) NSIndexPath *indexPath;
 @end
+

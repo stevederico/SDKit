@@ -18,11 +18,11 @@
     if (self) {
         self.textField = [[UITextField alloc] init];
         self.textField.clearButtonMode = UITextFieldViewModeWhileEditing;
-<<<<<<< HEAD
+
         self.textField.textAlignment = NSTextAlignmentLeft;
-=======
-        self.textField.textAlignment = UITextAlignmentLeft;
->>>>>>> ee13d003b6311215751d2584ce3c0f0a0a36f644
+
+        self.textField.textAlignment = NSTextAlignmentLeft;
+
         self.textField.placeholder = @"Placeholder";
         self.textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
         self.selectionStyle = UITableViewCellSelectionStyleNone;
