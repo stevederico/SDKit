@@ -36,6 +36,7 @@
         _textField.hidden = NO;
 		_textField.frame = CGRectMake(origFrame.origin.x, origFrame.origin.y, 125, origFrame.size.height-1);
 		_textField.frame = CGRectMake(origFrame.origin.x+130, origFrame.origin.y, origFrame.size.width-140, origFrame.size.height);
+        
 	} else {
 		_textField.hidden = YES;
 		NSInteger imageWidth = 0;
@@ -45,10 +46,7 @@
 		_textField.frame = CGRectMake(origFrame.origin.x+imageWidth+10, origFrame.origin.y, origFrame.size.width-imageWidth-20, origFrame.size.height-1);
 	}
     
-    
     [self setNeedsDisplay];
-
-
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {

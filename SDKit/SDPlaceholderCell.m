@@ -10,40 +10,30 @@
 #import "SDPlaceholderCell.h"
 
 @implementation SDPlaceholderCell
-@synthesize textField = _textField;
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
-{
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self) {
-        self.textField = [[UITextField alloc] init];
-        self.textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+//_textField.frame = CGRectMake(origFrame.origin.x, origFrame.origin.y, origFrame.size.width-20, origFrame.size.height-1);
 
-        self.textField.textAlignment = NSTextAlignmentLeft;
-
-        self.textField.textAlignment = NSTextAlignmentLeft;
-
-        self.textField.placeholder = @"Placeholder";
-        self.textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
-        self.selectionStyle = UITableViewCellSelectionStyleNone;
-        [self.contentView addSubview:self.textField];
-        [self.textLabel setHidden:YES];
-    
-    }
-    return self;
-}
 
 -(void)layoutSubviews {
     [super layoutSubviews];
- 
-    CGFloat margin = self.contentView.bounds.size.height * .10;
-    CGFloat height = self.contentView.bounds.size.height;
-    CGRect rect = CGRectMake(margin,
-                             self.contentView.bounds.origin.y + (self.contentView.bounds.size.height - height)/2,
-                             self.contentView.bounds.size.width- margin*2,
-                             height);
-    [self.textField setFrame:rect];  
-
+    
+    CGRect origFrame = self.contentView.frame;
+	if (self.textField.text != nil) {
+        self.textField.hidden = NO;
+//		_textField.frame = CGRectMake(origFrame.origin.x, origFrame.origin.y, 125, origFrame.size.height-1);
+//		_textField.frame = CGRectMake(origFrame.origin.x+130, origFrame.origin.y, origFrame.size.width-140, origFrame.size.height);
+        self.textField.frame = CGRectMake(origFrame.origin.x, origFrame.origin.y, origFrame.size.width-20, origFrame.size.height-1);
+        
+	} else {
+		self.textField.hidden = YES;
+		NSInteger imageWidth = 0;
+		if (self.imageView.image != nil) {
+			imageWidth = self.imageView.image.size.width + 5;
+		}
+		self.textField.frame = CGRectMake(origFrame.origin.x+imageWidth+10, origFrame.origin.y, origFrame.size.width-imageWidth-20, origFrame.size.height-1);
+	}
+    
+    [self setNeedsDisplay];
 }
 
 

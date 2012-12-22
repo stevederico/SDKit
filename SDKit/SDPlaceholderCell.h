@@ -5,7 +5,7 @@
 //  Created by Steve Derico on 9/20/11.
 //  Copyright 2011 Bixby Apps. All rights reserved.
 //
-
+#import "SDTextFieldCell.h"
 #import <UIKit/UIKit.h>
 
 /**
@@ -18,7 +18,7 @@
  The designated initializer for this class is initWithStyle:reuseIdentifier:
  */
 
-@interface SDPlaceholderCell : UITableViewCell
+@interface SDPlaceholderCell : SDTextFieldCell
 
 ///--------------------------------
 /// @name Setting the Placeholder
@@ -28,6 +28,6 @@
  The textField used to display placeholder text and retrieve user input
  */
 
-@property (nonatomic,retain) UITextField *textField;
+
 
 @end
