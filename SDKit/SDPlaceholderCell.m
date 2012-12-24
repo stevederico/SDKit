@@ -11,17 +11,12 @@
 
 @implementation SDPlaceholderCell
 
-//_textField.frame = CGRectMake(origFrame.origin.x, origFrame.origin.y, origFrame.size.width-20, origFrame.size.height-1);
-
-
 -(void)layoutSubviews {
     [super layoutSubviews];
     
     CGRect origFrame = self.contentView.frame;
 	if (self.textField.text != nil) {
         self.textField.hidden = NO;
-//		_textField.frame = CGRectMake(origFrame.origin.x, origFrame.origin.y, 125, origFrame.size.height-1);
-//		_textField.frame = CGRectMake(origFrame.origin.x+130, origFrame.origin.y, origFrame.size.width-140, origFrame.size.height);
         self.textField.frame = CGRectMake(origFrame.origin.x, origFrame.origin.y, origFrame.size.width-20, origFrame.size.height-1);
         
 	} else {

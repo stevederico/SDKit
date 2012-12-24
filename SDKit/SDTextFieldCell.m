@@ -12,8 +12,7 @@
 @implementation SDTextFieldCell
 @synthesize textField = _textField;
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
-{
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         _textField = [[UITextField alloc] initWithFrame:CGRectZero];
@@ -22,6 +21,7 @@
         _textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         _textField.textAlignment = NSTextAlignmentLeft;
         _textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+        [_textField setDelegate:self];
         [self setSelectionStyle:UITableViewCellSelectionStyleNone];
         [self.contentView addSubview:self.textField];
     }
@@ -61,8 +61,7 @@
     return ret;
 }
 
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
-{
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
 	NSString *textString = self.textField.text;
 	textString = [textString stringByReplacingCharactersInRange:range withString:string];
 	
@@ -73,46 +72,40 @@
 	return YES;
 }
 
-- (BOOL)textFieldShouldClear:(UITextField *)textField
-{
+- (BOOL)textFieldShouldClear:(UITextField *)textField {
     if([_delegate respondsToSelector:@selector(updateTextLabelAtIndexPath:string:)]) {
 		[_delegate performSelector:@selector(updateTextLabelAtIndexPath:string:) withObject:_indexPath withObject:nil];
 	}
     return YES;
 }
 
-- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
-{
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
     if([_delegate respondsToSelector:@selector(textFieldShouldBeginEditing:)]) {
 		return [_delegate textFieldShouldBeginEditing:(UITextField *)textField];
 	}
     return YES;
 }
 
-- (BOOL)textFieldShouldEndEditing:(UITextField *)textField
-{
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField {
     if([_delegate respondsToSelector:@selector(textFieldShouldEndEditing:)]) {
 		return [_delegate textFieldShouldEndEditing:(UITextField *)textField];
 	}
     return YES;
 }
 
-- (void)textFieldDidBeginEditing:(UITextField *)textField
-{
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
     if([_delegate respondsToSelector:@selector(textFieldDidBeginEditing:)]) {
 		return [_delegate textFieldDidBeginEditing:(UITextField *)textField];
 	}
 }
 
-- (void)textFieldDidEndEditing:(UITextField *)textField
-{
+- (void)textFieldDidEndEditing:(UITextField *)textField {
     if([_delegate respondsToSelector:@selector(textFieldDidEndEditing:)]) {
         [_delegate textFieldDidEndEditing:(UITextField*)textField];
     }
 }
 
-- (void)dealloc
-{
+- (void)dealloc {
     _delegate = nil;
     [_textField resignFirstResponder];
     
