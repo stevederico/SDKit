@@ -18,6 +18,7 @@
         _textField = [[UITextField alloc] initWithFrame:CGRectZero];
         [_textField setFont:[UIFont systemFontOfSize:17]];
         _textField.clearsOnBeginEditing = NO;
+        _textField.textColor = [UIColor colorWithRed:0.22 green:0.33 blue:0.53 alpha:1];
         _textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         _textField.textAlignment = NSTextAlignmentLeft;
         _textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
