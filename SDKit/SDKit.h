@@ -1,5 +1,5 @@
 //
-//  SDFooterButton.h
+//  SDKit.h
 //  SDKit
 //
 //  Created by Stephen Derico on 1/7/12.
