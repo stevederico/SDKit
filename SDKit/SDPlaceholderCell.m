@@ -18,7 +18,7 @@
 	if (self.textField.text != nil || self.textField.placeholder != nil) {
         self.textField.hidden = NO;
         self.textField.frame = CGRectMake(origFrame.origin.x, origFrame.origin.y, origFrame.size.width-20, origFrame.size.height-1);
-        
+        self.textField.autocapitalizationType = UITextAutocapitalizationTypeNone;
 	} else {
 		self.textField.hidden = YES;
 		NSInteger imageWidth = 0;
